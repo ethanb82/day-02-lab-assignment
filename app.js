@@ -38,7 +38,24 @@ var answer3 = prompt(userName + ', Am I a tech geek?');
 var answer4 = prompt(userName + ', on a scale of 1 to 10, how good of friends are we?');
   console.log('Your friend responded, ' + answer4 + ' to question 4.');
     if (answer4 >= 7){
-      alert('We go way back ' + userName + '. And great job, you got ' + answersRight + ' right, and ' + answersWrong + ' wrong overall!');
+      alert('We go way back ' + userName + '. And great job, you got ' + answersRight + ' right, and ' + answersWrong + ' wrong!');
     } else {
-      alert('We need to work on this ' + userName + '. You got ' + answersRight + ' right, and ' + answersWrong + ' wrong overall.');
+      alert('We need to work on this ' + userName + '. You got ' + answersRight + ' right, and ' + answersWrong + ' wrong.');
     }
+
+var incorrectAnswer5 = false;
+var attempts = 0;
+  while (incorrectAnswer5 === false){
+    var answer5 = prompt(userName + ', This is the final question... What is my favorite number?');
+      if (answer5 < 18){
+      attempts ++;
+        alert('Nope too low, try again!');
+        } else if (answer5 > 18){
+        attempts ++;
+          alert('Nope too high, try again!');
+          } else {
+          attempts ++;
+            alert('Wow! You really know your stuff. It took you ' + attempts + ' attempts to guess my number, and you got ' + answersRight + ' questions correct, and ' + answersWrong + ' questions wrong. Thanks for playing!');
+            incorrectAnswer5 = true;
+            }
+          }
